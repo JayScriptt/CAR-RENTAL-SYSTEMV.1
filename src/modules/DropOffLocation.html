@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarina&family=Shrikhand&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarina&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header
+      class="flex items-center justify-between bg-[#df927f] p-3 text-white"
+    >
+      <p class="font-bold text-[2rem] shrikhand-regular" id="systemName">
+        Car Rental
+      </p>
+      <div class="flex items-center justify-end" id="links">
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          Home
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          About
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          My Booking
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          Help
+        </p>
+      </div>
+    </header>
+    <main
+      id="mainContent"
+      class="bg-[url('./assets/images/dropOffbg.jpg')] bg-cover bg-center h-[100vh] w-full flex items-center justify-center font-bold"
+    >
+      <div
+        class="min-w-[200px] border-white border-2 bg-[#00000096] p-5 flex flex-col items-center justify-center rounded-md w-[40%] relative"
+        id="dropOffFormContainer"
+      >
+        <input
+          class="min-w-[200px] bg-white w-[80%] p-2 m-4 rounded-md"
+          type="text"
+          placeholder="Enter your pick-up location/drop-off location"
+        />
+        <br />
+        <div id="date-range-picker" date-rangepicker class="flex items-center">
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                />
+              </svg>
+            </div>
+            <input
+              id="datepicker-range-start"
+              name="start"
+              type="text"
+              class="min-w-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Select date start"
+            />
+          </div>
+          <span class="mx-4 text-white">to</span>
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                />
+              </svg>
+            </div>
+            <input
+              id="datepicker-range-end"
+              name="end"
+              type="text"
+              class="min-w-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Select date end"
+            />
+          </div>
+        </div>
+
+        <br />
+
+        <br />
+
+        <div id="date-range-picker" date-rangepicker class="flex items-center">
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#999999"
+              >
+                <path
+                  d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"
+                />
+              </svg>
+            </div>
+            <input
+              id="datepicker-range-start"
+              name="start"
+              type="text"
+              class="min-w-[50px] bg-border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Select time start"
+            />
+          </div>
+          <span class="mx-4 text-white">to</span>
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#999999"
+              >
+                <path
+                  d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"
+                />
+              </svg>
+            </div>
+            <input
+              id="datepicker-range-end"
+              name="end"
+              type="text"
+              class="min-w-[50px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Select time end"
+            />
+          </div>
+        </div>
+        <div class="flex items-center justify-center gap-4 mt-4">
+          <label class="text-white flex items-center cursor-pointer">
+            <input type="radio" name="driveOption" class="hidden peer" />
+            <span
+              class="px-4 py-2 bg-[#df927f] hover:bg-[#f5c5ba] text-white rounded-lg peer-checked:bg-white peer-checked:text-[#df927f] transition-all"
+            >
+              Self Drive
+            </span>
+          </label>
+          <label
+            class="text-white flex items-center cursor-pointer min-w-[50px]"
+          >
+            <input
+              type="radio"
+              name="driveOption"
+              class="min-w-[50px] hidden peer"
+            />
+            <span
+              class="px-4 py-2 bg-[#df927f] hover:bg-[#f5c5ba] text-white rounded-lg peer-checked:bg-white peer-checked:text-[#df927f] transition-all min-w-[50px]"
+            >
+              With Driver
+            </span>
+          </label>
+        </div>
+        <br />
+        <button
+          class="border cursor-pointer bg-white hover:bg-[#f5c3c3] p-2 rounded-lg w-[70px]"
+          onclick="location.href='./CarModule.html'"
+        >
+          Next
+        </button>
+      </div>
+    </main>
+    <footer>
+      <div id="footerContainer">
+        <div
+          class="bg-[#837671] w-full p-3 flex flex-col justify-center items-center text-white text-[1rem]"
+          id="upperPart"
+        >
+          <p>Contacts</p>
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+        <p
+          class="bg-[#7a5e50] w-full p-3 flex flex-col justify-center items-center text-white text-[1rem]"
+        >
+          &copy; April 2025 CarRental. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> -->
+  </body>
+</html>

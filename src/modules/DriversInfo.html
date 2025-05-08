@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarina&family=Shrikhand&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarina&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header
+      class="flex items-center justify-between bg-[#df927f] p-3 text-white"
+    >
+      <p class="font-bold text-[2rem] shrikhand-regular" id="systemName">
+        Car Rental
+      </p>
+      <!-- Full nav for landscape -->
+      <div
+        class="flex items-center justify-end landscape:flex portrait:hidden"
+        id="links"
+      >
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          Home
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          About
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          My Booking
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          Help
+        </p>
+      </div>
+
+      <!-- Burger menu for portrait -->
+      <div
+        class="portrait:flex landscape:hidden justify-end p-3"
+        id="burgerMenu"
+      >
+        <button class="text-3xl" id="burgerToggle">☰</button>
+      </div>
+
+      <!-- Mobile nav in portrait mode, initially hidden -->
+      <div
+        class="hidden transition-all duration-300 ease-in-out flex-col items-center justify-around bg-[#00000077] top-0 absolute h-[100%] w-[100vw] portrait:flex landscape:hidden translate-x-[100%]"
+        id="mobileLinks"
+      >
+        <!-- X Close Button -->
+        <button class="self-start text-3xl m-5" id="closeBtn">✕</button>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          Home
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          About
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          My Booking
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          Help
+        </p>
+      </div>
+    </header>
+    <main
+      id="mainContent"
+      class="bg-[url('./assets/images/mainbg.jpg')] bg-cover bg-center h-[100vh] w-full"
+    >
+      <h1 class="font-bold text-[2rem] shrikhand-regular text-center p-5">
+        Drivers Information
+      </h1>
+      <div
+        class="flex justify-center items-center m-5 flex-col"
+        id="clientFormContainer"
+      >
+        <p class="text-gray-600 text-md">
+          Note it should match Driver’s License
+        </p>
+        <div
+          class="flex flex-wrap justify-center gap-2 rounded-2xl w-[80%] bg-white p-3"
+        >
+          <div
+            class="flex flex-col m-2 p-2 w-full portrait:w-[90%] landscape:w-[45%]"
+          >
+            <label for="clientFirstName">First Name</label>
+            <input
+              class="border rounded-4xl p-2"
+              type="text"
+              id="clientFirstName"
+            />
+          </div>
+
+          <div
+            class="flex flex-col m-2 p-2 w-full portrait:w-[90%] landscape:w-[45%]"
+          >
+            <label for="clientLastName">Last Name</label>
+            <input
+              class="border rounded-4xl p-2"
+              type="text"
+              id="clientLastName"
+            />
+          </div>
+
+          <div
+            class="flex flex-col m-2 p-2 w-full portrait:w-[90%] landscape:w-[45%]"
+          >
+            <label for="clientDateOfBirth">Date of Birth</label>
+            <input
+              class="border rounded-4xl p-2"
+              type="date"
+              id="clientDateOfBirth"
+            />
+          </div>
+
+          <div
+            class="flex flex-col m-2 p-2 w-full portrait:w-[90%] landscape:w-[45%]"
+          >
+            <label for="clientPhoneNumber">Phone Number</label>
+            <input
+              class="border rounded-4xl p-2"
+              type="number"
+              id="clientPhoneNumber"
+            />
+          </div>
+
+          <div
+            class="flex flex-col m-2 p-2 w-full portrait:w-[90%] landscape:w-[45%]"
+          >
+            <label for="clientEmail">Email</label>
+            <input
+              class="border rounded-4xl p-2"
+              type="email"
+              id="clientEmail"
+            />
+          </div>
+
+          <div
+            class="flex flex-col m-2 p-2 w-full portrait:w-[90%] landscape:w-[45%]"
+          >
+            <label for="clientAddress">Address</label>
+            <input
+              class="border rounded-4xl p-2"
+              type="text"
+              id="clientAddress"
+            />
+          </div>
+        </div>
+
+        <div class="mt-4 rounded-2xl w-[80%] bg-white p-4">
+          <h2 class="font-bold">Payment</h2>
+          <br />
+          <p>Payment will be collected on the scheduled pickup date.</p>
+        </div>
+        <button
+          class="bg-green-600 m-5 p-2 rounded-4xl font-bold cursor-pointer hover:bg-green-400"
+          id="submtAndPayLaterBtn"
+          onclick="location.href='./TermsAndConditions.html'"
+        >
+          Submit & Pay Later
+        </button>
+      </div>
+    </main>
+    <footer>
+      <div id="footerContainer">
+        <div
+          class="bg-[#837671] w-full p-3 flex flex-col justify-center items-center text-white text-[1rem]"
+          id="upperPart"
+        >
+          <p>Contacts</p>
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+        <p
+          class="bg-[#7a5e50] w-full p-3 flex flex-col justify-center items-center text-white text-[1rem]"
+        >
+          &copy; April 2025 CarRental. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="../JS FILES/burgerMenu.js"></script>
+  </body>
+</html>

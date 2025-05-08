@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarina&family=Shrikhand&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarina&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header
+      class="flex items-center justify-between bg-[#df927f] p-3 text-white"
+    >
+      <p class="font-bold text-[2rem] shrikhand-regular" id="systemName">
+        Car Rental
+      </p>
+      <!-- Full nav for landscape -->
+      <div
+        class="flex items-center justify-end landscape:flex portrait:hidden"
+        id="links"
+      >
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          Home
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          About
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          My Booking
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          Help
+        </p>
+      </div>
+
+      <!-- Burger menu for portrait -->
+      <div
+        class="portrait:flex landscape:hidden justify-end p-3"
+        id="burgerMenu"
+      >
+        <button class="text-3xl" id="burgerToggle">☰</button>
+      </div>
+
+      <!-- Mobile nav in portrait mode, initially hidden -->
+      <div
+        class="hidden transition-all duration-300 ease-in-out flex-col items-center justify-around bg-[#00000077] top-0 absolute h-[100%] w-[100vw] portrait:flex landscape:hidden translate-x-[100%]"
+        id="mobileLinks"
+      >
+        <!-- X Close Button -->
+        <button class="self-start text-3xl m-5" id="closeBtn">✕</button>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          Home
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          About
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          My Booking
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          Help
+        </p>
+      </div>
+    </header>
+    <main
+      id="mainContent"
+      class="bg-[url('./assets/images/mainbg.jpg')] bg-cover bg-center h-[100vh] w-full"
+    >
+      <h1 class="font-bold text-[2rem] shrikhand-regular text-center p-5">
+        Client Information
+      </h1>
+
+      <div
+        class="flex justify-center items-center m-5 flex-col"
+        id="clientFormContainer"
+      >
+        <div
+          class="mt-4 rounded-2xl w-[50%] bg-white p-6 h-[70vh] text-wrap overflow-y-auto"
+        >
+          <h2 class="font-bold text-center">
+            Car Rent with Driver Terms and Conditions
+          </h2>
+          <br />
+          <p>1. Package Inclusions</p>
+          <p>
+            - The rental package includes the use of the vehicle, fuel, road
+            toll fees, and the services of a designated driver.
+          </p>
+          <p>2. Package Exclusions</p>
+          <p>
+            - Should the rental period exceed the allotted hours, an additional
+            hourly fee shall apply.
+          </p>
+          <p>3. Payment Terms</p>
+          <p>
+            - CarRental accepts payments via over-the-counter cash transactions
+            and GCash. Any additional costs incurred during the rental period
+            shall be settled directly with the assigned driver.
+          </p>
+          <p>4. No-Show Policy</p>
+          <p>
+            - If the renter fails to appear within three (3) hours of the
+            scheduled pick-up time, the reservation shall be deemed canceled
+            without refund or compensation.
+          </p>
+          <p>5. Cleaning Fees</p>
+          <p>
+            - Any client-related mess, including but not limited to vomiting,
+            spilling of liquids, or defecation, that requires special cleaning
+            shall be subject to a penalty fee of PHP 500.
+          </p>
+          <p>6. Liability for Damages</p>
+          <p>
+            - The renter shall bear full financial responsibility for any damage
+            caused to the vehicle during the rental period. This includes but is
+            not limited to the full cost of repairs, restoration, and any
+            revenue losses resulting from the vehicle being unavailable for
+            future rentals.
+          </p>
+          <p>7. Identification Requirements</p>
+          <p>
+            - The renter must provide at least one (1) valid government-issued
+            identification document, such as a driver’s license, passport, or
+            national ID.
+          </p>
+          <p>
+            - By proceeding with the rental, the renter acknowledges and agrees
+            to the terms and conditions outlined in this agreement.
+          </p>
+          <p>- Payment will be collected on the scheduled pickup date.</p>
+        </div>
+        <button
+          class="bg-green-600 m-5 p-2 rounded-4xl font-bold cursor-pointer hover:bg-green-400"
+          id="ProceedBtn"
+          onclick="location.href='./ReservationModule.html'"
+        >
+          Proceed
+        </button>
+      </div>
+    </main>
+    <footer>
+      <div id="footerContainer">
+        <div
+          class="bg-[#837671] w-full p-3 flex flex-col justify-center items-center text-white text-[1rem]"
+          id="upperPart"
+        >
+          <p>Contacts</p>
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+        <p
+          class="bg-[#7a5e50] w-full p-3 flex flex-col justify-center items-center text-white text-[1rem]"
+        >
+          &copy; April 2025 CarRental. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="../JS FILES/burgerMenu.js"></script>
+  </body>
+</html>

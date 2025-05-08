@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarina&family=Shrikhand&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarina&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header
+      class="flex items-center justify-between bg-[#df927f] p-3 text-white"
+    >
+      <p class="font-bold text-[2rem] shrikhand-regular" id="systemName">
+        Car Rental
+      </p>
+      <!-- Full nav for landscape -->
+      <div
+        class="flex items-center justify-end landscape:flex portrait:hidden"
+        id="links"
+      >
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          Home
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          About
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          My Booking
+        </p>
+        <p
+          class="m-3 text-[1rem] cursor-pointer yeseva-one-regular-book-now-btn"
+        >
+          Help
+        </p>
+      </div>
+
+      <!-- Burger menu for portrait -->
+      <div
+        class="portrait:flex landscape:hidden justify-end p-3"
+        id="burgerMenu"
+      >
+        <button class="text-3xl" id="burgerToggle">☰</button>
+      </div>
+
+      <!-- Mobile nav in portrait mode, initially hidden -->
+      <div
+        class="hidden transition-all duration-300 ease-in-out flex-col items-center justify-around bg-[#00000077] top-0 absolute h-[100%] w-[100vw] portrait:flex landscape:hidden translate-x-[100%]"
+        id="mobileLinks"
+      >
+        <!-- X Close Button -->
+        <button class="self-start text-3xl m-5" id="closeBtn">✕</button>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          Home
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          About
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          My Booking
+        </p>
+        <p
+          class="w-[100%] text-center p-3 text-[1.5rem] cursor-pointer yeseva-one-regular-book-now-btn hover:bg-[#ffffff42] transition-all duration-300 ease-in-out"
+        >
+          Help
+        </p>
+      </div>
+    </header>
+    <main
+      id="mainContent"
+      class="bg-[url('./assets/images/mainbg.jpg')] bg-cover bg-center h-[100vh] w-full"
+    >
+      <div
+        class="flex flex-col justify-around h-full items-center"
+        id="introContainer"
+      >
+        <div class="mt-[5%] flex flex-col items-center">
+          <h1
+            class="yeseva-one-regular-book-now-btn text-white text-2xl bg-[#00000038] p-5 rounded-2xl mb-6"
+          >
+            The Road Awaits - Reserve Your Ride Today!
+          </h1>
+          <button
+            onclick="location.href='./DropOffLocation.html'"
+            class="border text-[#986555] cursor-pointer h-16 w-48 rounded-full bg-[#e2e2e2] p-2 font-extrabold hover:bg-white"
+          >
+            <p class="yeseva-one-regular-book-now-btn text-2xl">Book Now</p>
+          </button>
+        </div>
+
+        <div
+          id="boxContainer"
+          class="flex flex-wrap items-center justify-center gap-3 text-white yeseva-one-regular-book-now-btn mb-5"
+        >
+          <div
+            class="boxes p-5 text-center w-[200px] bg-[hsl(35,27%,24%)] rounded-md"
+          >
+            <p>Reliable Rides, Unmatched Service.</p>
+          </div>
+          <div class="boxes p-5 text-center w-[200px] bg-[#2c343c] rounded-md">
+            <p>Smooth Reservations, Smoother Rides.</p>
+          </div>
+          <div class="boxes p-5 text-center w-[200px] bg-[#aa6d3f] rounded-md">
+            <p>From Booking to Driving – Hassle-Free.</p>
+          </div>
+          <div class="boxes p-5 text-center w-[200px] bg-[#757c7c] rounded-md">
+            <p>Drive with Ease, Arrive in Style.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footerContainer">
+        <div
+          class="bg-[#837671] w-full p-3 flex flex-col justify-center items-center text-white text-[1rem]"
+          id="upperPart"
+        >
+          <p>Contacts</p>
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+        <p
+          class="bg-[#7a5e50] w-full p-3 flex flex-col justify-center items-center text-white text-[1rem]"
+        >
+          &copy; April 2025 CarRental. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="../JS FILES/burgerMenu.js"></script>
+  </body>
+</html>
